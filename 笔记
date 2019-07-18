@@ -3,10 +3,8 @@ ctrl_namespace_begin = namespace ctrl {
 ctrl_namespace_end = }
 
 
- 类的构造函数&类的析构函数        http://www.runoob.com/cplusplus/cpp-constructor-destructor.html   
-
+类的构造函数&类的析构函数        http://www.runoob.com/cplusplus/cpp-constructor-destructor.html   
 构造函数是类的一种特殊的成员函数，它会在每次创建类的新对象时执行。构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回 void。构造函数可用于为某些成员变量设置初始值。
-
 析构函数是类的一种特殊的成员函数，它会在每次删除所创建的对象时执行。析构函数的名称与类的名称是完全相同的，只是在前面加了个波浪号（~）作为前缀，它不会返回任何值，也不能带有任何参数。析构函数有助于在跳出程序（比如关闭文件、释放内存等）前释放资源。
 
 
@@ -18,40 +16,46 @@ override 关键字
 类::instance()
 调用instance()初始化得到指向唯一实例的指针
 
+
 std::function<Layer*()>
 可调用对象模板类，std::function<Layer*()>代表一个可调用对象，接收0个参数，返回Layer*。
+
 
 function可以将普通函数，lambda表达式和函数对象类统一起来。它们并不是相同的类型，然而通过function模板类，可以转化为相同类型的对象（function对象），从而放入一个map里
 https://blog.csdn.net/wangshubo1989/article/details/49134235
 
+
 Deleted 函数
 C++11 标准引入了一个新特性。程序员只需在函数声明后加上“=delete;”，就可将该函数禁用。例如，我们可以将类 X 的拷贝构造函数以及拷贝赋值操作符声明为 deleted 函数，就可以禁止类 X 对象之间的拷贝和赋值。
+
 
 emplace_back
 在容器Vector尾部添加一个元素，这个元素原地构造，不需要触发拷贝构造和转移构造。而且调用形式更加简洁，直接根据参数初始化临时对象的成员。 
 
-Explicit
 
+Explicit
 只对构造函数起作用，用来抑制隐式转换。
 例如：
 String s2 ( 10 );   //OK 分配10个字节的空字符串
 String s3 = String ( 10 ); //OK 分配10个字节的空字符串
- String s4 = 10; //编译不通过，不允许隐式的转换
+String s4 = 10; //编译不通过，不允许隐式的转换
 String s5 = ‘a’; //编译不通过，不允许隐式的转换
 
-dynamic_cast< > 
 
+dynamic_cast< > 
 作用：将一个基类对象指针（或引用）转换到继承类指针，dynamic_cast会根据基类指针是否真正指向继承类指针来做相应处理，  即会作一定的判断。 
 对指针进行dynamic_cast，失败返回null，成功返回正常cast后的对象指针； 
 对引用进行dynamic_cast，失败抛出一个异常，成功返回正常cast后的对象引用。 
+
 
 strtol，long int strtol (const char* str, char** endptr, int base);
 作用就是将一个字符串转换为长整型long
 str是要转换的字符，enptr是指向第一个不可转换的字符位置的指针，base是基数，表示转换成为几进制的数
 
-打桩
 
+打桩
 如果在测试function()函数是需要调用test()，但是在测试的时候函数test()还没有编写好，这时可以写一个test()的打桩函数来模拟test()函数使它只返回一个值，从而完成测试。
+
 
 NE
 Ne = network = 网元
